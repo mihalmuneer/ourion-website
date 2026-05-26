@@ -4,9 +4,21 @@ export const WEB3FORMS_ACCESS_KEY = "939191c0-d3a5-4c6f-8acd-5f6440de8000";
 export const WEB3FORMS_SUBMIT_URL = "https://api.web3forms.com/submit";
 export const WEB3FORMS_SUBJECT = "New Ourion Website Enquiry";
 
-/** Update with your business WhatsApp number (country code, no + or spaces) */
-export const WHATSAPP_PHONE = "447000000000";
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Hi Ourion, I'd like to discuss a project.")}`;
+/** WhatsApp business number (country code, no + or spaces) */
+export const WHATSAPP_PHONE = "447770767380";
+
+export const WHATSAPP_MESSAGE = "Hi Ourion, I'd like to discuss a project.";
+
+/** Canonical WhatsApp URL — use for every WhatsApp CTA */
+export const WHATSAPP_LINK =
+  "https://wa.me/447770767380?text=Hi%20Ourion%2C%20I%27d%20like%20to%20discuss%20a%20project.";
+
+/** Open WhatsApp links in a new tab (for raw <a> elements) */
+export const WHATSAPP_LINK_PROPS = {
+  href: WHATSAPP_LINK,
+  target: "_blank",
+  rel: "noopener noreferrer",
+};
 
 export const NAV_LINKS = [
   { label: "Home", to: "/" },

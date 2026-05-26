@@ -18,7 +18,7 @@ import {
   CONTACT_EMAIL,
   FREIGHTOS_FEATURES,
   FREIGHTOS_WORKFLOW,
-  WORKFLOW_REVIEW_MAIL,
+  WHATSAPP_LINK,
 } from "../data/content";
 import { FREIGHTOS_BUILD } from "../data/freightos";
 import { projects } from "../data/projects";
@@ -40,9 +40,9 @@ export default function ProjectsPage() {
         title="Real builds. Real operations. Honest progress."
         description="A look at Ourion's active builds, ventures, and operational systems across logistics, automation, automotive, and interior design."
         primaryCta="Start Your Project"
-        primaryHref={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("New project enquiry")}`}
+        primaryHref={WHATSAPP_LINK}
         secondaryCta="Request a Workflow Review"
-        secondaryHref={WORKFLOW_REVIEW_MAIL}
+        secondaryHref={WHATSAPP_LINK}
       />
 
       <section className="border-b border-ourion-border bg-ourion-light py-16 sm:py-20 lg:py-28">
@@ -158,7 +158,7 @@ export default function ProjectsPage() {
       <CTASection
         title="Have a build or venture in mind?"
         description="Tell us what you are structuring, operating, or scaling. We will be direct about what is in scope and what is in progress."
-        primaryHref={WORKFLOW_REVIEW_MAIL}
+        primaryHref={WHATSAPP_LINK}
         secondaryCta="Contact us"
         secondaryTo="/contact"
       />

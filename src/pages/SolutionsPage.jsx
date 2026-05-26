@@ -1,11 +1,10 @@
 import Button from "../components/ui/Button";
-import { CONTACT_EMAIL } from "../data/content";
 import CardGrid from "../components/ui/CardGrid";
 import CTASection from "../components/ui/CTASection";
 import PageHero from "../components/ui/PageHero";
 import ProcessCard from "../components/ui/ProcessCard";
 import ServiceCard from "../components/ui/ServiceCard";
-import { WORKFLOW_REVIEW_MAIL } from "../data/content";
+import { CONTACT_EMAIL, WHATSAPP_LINK } from "../data/content";
 import { packages, PACKAGES_PRICING_NOTE } from "../data/packages";
 import { processSteps } from "../data/process";
 import { services } from "../data/services";
@@ -20,7 +19,7 @@ export default function SolutionsPage() {
         primaryCta="Discuss a Project"
         primaryHref={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Project discussion")}`}
         secondaryCta="Request a Workflow Review"
-        secondaryHref={WORKFLOW_REVIEW_MAIL}
+        secondaryHref={WHATSAPP_LINK}
       />
 
       <section id="process" className="scroll-mt-24 border-b border-ourion-border bg-ourion-light py-16 sm:py-20 lg:py-28">
@@ -95,7 +94,11 @@ export default function SolutionsPage() {
                   {pkg.description}
                 </p>
                 <Button
-                  href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(pkg.mailSubject)}`}
+                  href={
+                    pkg.opensWhatsApp
+                      ? WHATSAPP_LINK
+                      : `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(pkg.mailSubject)}`
+                  }
                   variant={pkg.highlighted ? "primary" : "secondary"}
                   className="mt-8 w-full"
                 >
@@ -114,7 +117,7 @@ export default function SolutionsPage() {
       <CTASection
         title="Not sure where to start?"
         description="Begin with a workflow review. We will map bottlenecks and recommend the right systems to build first."
-        primaryHref={WORKFLOW_REVIEW_MAIL}
+        primaryHref={WHATSAPP_LINK}
         secondaryCta="View active builds"
         secondaryTo="/projects"
       />

@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../ui/Button";
 import { NavbarLogo } from "../ui/Logo";
-import { NAV_LINKS, CONTACT_EMAIL } from "../../data/content";
+import { NAV_LINKS, WHATSAPP_LINK } from "../../data/content";
 
 const SCROLL_THRESHOLD = 32;
 
@@ -52,7 +52,7 @@ export default function Header() {
 
         <div className="hidden shrink-0 md:block">
           <Button
-            href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Workflow Review enquiry")}`}
+            href={WHATSAPP_LINK}
             size="sm"
           >
             Workflow Review
@@ -89,7 +89,7 @@ export default function Header() {
                 </a>
               ))}
               <Button
-                href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Workflow Review enquiry")}`}
+                href={WHATSAPP_LINK}
                 size="sm"
                 className="mt-2 w-full"
               >

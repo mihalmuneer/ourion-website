@@ -3,9 +3,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Button from "../ui/Button";
 import DashboardMock from "../ui/DashboardMock";
 import { PROCESS_LINE, PROCESS_TAGLINE } from "../../data/brand";
-import { CONTACT_EMAIL } from "../../data/content";
-
-const WORKFLOW_REVIEW_MAIL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Workflow Review enquiry")}`;
+import { WHATSAPP_LINK } from "../../data/content";
 
 export default function Hero() {
   return (
@@ -41,7 +39,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button href={WORKFLOW_REVIEW_MAIL} size="lg" className="sm:min-w-[260px]">
+              <Button href={WHATSAPP_LINK} size="lg" className="sm:min-w-[260px]">
                 Start With a Workflow Review
                 <ArrowRight size={18} strokeWidth={2.5} />
               </Button>

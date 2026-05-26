@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../ui/Button";
 import { NavbarLogo } from "../ui/Logo";
-import { NAV_LINKS, WORKFLOW_REVIEW_MAIL } from "../../data/content";
+import { NAV_LINKS, WHATSAPP_LINK } from "../../data/content";
 
 const SCROLL_THRESHOLD = 32;
 
@@ -63,7 +63,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden shrink-0 md:block">
-          <Button href={WORKFLOW_REVIEW_MAIL} size="sm">
+          <Button href={WHATSAPP_LINK} size="sm">
             Workflow Review
           </Button>
         </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 </NavLink>
               ))}
               <Button
-                href={WORKFLOW_REVIEW_MAIL}
+                href={WHATSAPP_LINK}
                 size="md"
                 className="mt-3 w-full"
               >

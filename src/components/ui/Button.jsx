@@ -35,8 +35,16 @@ export default function Button({
   }
 
   if (href) {
+    const isExternal = /^https?:\/\//i.test(href);
     return (
-      <a href={href} className={classes} {...props}>
+      <a
+        href={href}
+        className={classes}
+        {...(isExternal
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+        {...props}
+      >
         {children}
       </a>
     );

@@ -5,6 +5,7 @@ export const packages = [
       "We study how your business runs today—where time is lost, what should be automated, and what a practical system plan should look like.",
     cta: "Request a Workflow Review",
     mailSubject: "Workflow Review enquiry",
+    opensWhatsApp: true,
     highlighted: false,
   },
   {

@@ -5,7 +5,7 @@ import PageHero from "../components/ui/PageHero";
 import {
   CONTACT_EMAIL,
   WHATSAPP_LINK,
-  WORKFLOW_REVIEW_MAIL,
+  WHATSAPP_LINK_PROPS,
   WEB3FORMS_ACCESS_KEY,
   WEB3FORMS_SUBMIT_URL,
   WEB3FORMS_SUBJECT,
@@ -71,7 +71,7 @@ export default function ContactPage() {
         title="Have a business process that feels messy?"
         description="Tell us what you currently manage through WhatsApp, Excel, calls, or manual follow-ups. We'll help you turn it into a clear system."
         primaryCta="Request a Workflow Review"
-        primaryHref={WORKFLOW_REVIEW_MAIL}
+        primaryHref={WHATSAPP_LINK}
         secondaryCta="WhatsApp Ourion"
         secondaryHref={WHATSAPP_LINK}
       />
@@ -102,10 +102,8 @@ export default function ContactPage() {
                 </li>
                 <li>
                   <a
-                    href={WHATSAPP_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-[44px] items-center gap-3 rounded-lg border border-emerald-600/30 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800 transition-colors hover:bg-emerald-100 sm:text-base"
+                    {...WHATSAPP_LINK_PROPS}
+                    className="inline-flex min-h-[48px] w-full items-center justify-center gap-3 rounded-lg border border-emerald-600/30 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800 transition-colors hover:bg-emerald-100 sm:w-auto sm:justify-start sm:text-base"
                   >
                     <MessageCircle size={20} />
                     WhatsApp Ourion

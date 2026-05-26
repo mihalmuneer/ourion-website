@@ -8,7 +8,7 @@ import ProjectCard from "../components/ui/ProjectCard";
 import ServiceCard from "../components/ui/ServiceCard";
 import DashboardMock from "../components/ui/DashboardMock";
 import { PROCESS_LINE, PROCESS_TAGLINE } from "../data/brand";
-import { WORKFLOW_REVIEW_MAIL } from "../data/content";
+import { WHATSAPP_LINK } from "../data/content";
 import { FREIGHTOS_BUILD } from "../data/freightos";
 import { processSteps } from "../data/process";
 import { projects } from "../data/projects";
@@ -45,7 +45,7 @@ export default function HomePage() {
                 reporting.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href={WORKFLOW_REVIEW_MAIL} size="lg" className="w-full sm:w-auto">
+                <Button href={WHATSAPP_LINK} size="lg" className="w-full sm:w-auto">
                   Start With a Workflow Review
                   <ArrowRight size={18} />
                 </Button>
@@ -177,7 +177,7 @@ export default function HomePage() {
       </section>
 
       <CTASection
-        primaryHref={WORKFLOW_REVIEW_MAIL}
+        primaryHref={WHATSAPP_LINK}
         secondaryCta="Contact Ourion"
         secondaryTo="/contact"
       />

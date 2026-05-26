@@ -27,7 +27,7 @@ export default function ContactCTA() {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href={copy.primaryHref} size="lg">
+            <Button href={WHATSAPP_LINK} size="lg">
               {copy.primaryCta}
               <ArrowRight size={18} />
             </Button>

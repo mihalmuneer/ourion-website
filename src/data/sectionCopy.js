@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL } from "./content";
+import { CONTACT_EMAIL, WHATSAPP_LINK } from "./content";
 
 const mail = (subject) =>
   `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
@@ -22,7 +22,7 @@ export const sectionCopy = {
     primaryCta: "See Our Process",
     primaryHref: "#process",
     secondaryCta: "Request a Workflow Review",
-    secondaryHref: mail("Workflow Review enquiry"),
+    secondaryHref: WHATSAPP_LINK,
   },
   freightos: {
     label: "What We Build",
@@ -42,7 +42,7 @@ export const sectionCopy = {
     primaryCta: "View Active Builds",
     primaryHref: "#projects",
     secondaryCta: "Start Your Project",
-    secondaryHref: mail("New project enquiry"),
+    secondaryHref: WHATSAPP_LINK,
   },
   contact: {
     label: "Contact",
@@ -50,8 +50,8 @@ export const sectionCopy = {
     description:
       "Tell us what you currently manage through WhatsApp, Excel, calls, or manual follow-ups. We'll help you turn it into a clear system.",
     primaryCta: "Request a Workflow Review",
-    primaryHref: mail("Workflow Review enquiry"),
+    primaryHref: WHATSAPP_LINK,
     secondaryCta: "WhatsApp Ourion",
-    secondaryHref: null,
+    secondaryHref: WHATSAPP_LINK,
   },
 };
