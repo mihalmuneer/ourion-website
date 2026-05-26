@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ourion-black: #0a0b10;
+  --color-ourion-surface: #12131a;
+  --color-ourion-card: #1a1b24;
+  --color-ourion-elevated: #22232e;
+  --color-ourion-border: #2e303d;
+  --color-ourion-border-bright: #3d4050;
+  --color-ourion-silver: #c8ccd6;
+  --color-ourion-silver-dim: #8b92a3;
+  --color-ourion-white: #ffffff;
+  --color-ourion-blue: #2b8cee;
+  --color-ourion-blue-bright: #4da3ff;
+  --color-ourion-blue-dim: #1a6fd4;
+  --color-ourion-light: #f4f6fa;
+  --color-ourion-light-card: #ffffff;
+  --color-ourion-light-muted: #eef1f6;
+  --color-ourion-light-border: #dde2eb;
+  --color-ourion-ink: #1a1d26;
+  --color-ourion-ink-muted: #5c6370;
+  --color-ourion-ink-soft: #7a8290;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply overflow-x-hidden bg-ourion-black text-ourion-silver antialiased;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    @apply bg-ourion-blue/35 text-ourion-white;
+  }
+}
+
+@layer components {
+  .logo-nav-slot img {
+    object-fit: contain;
+    image-rendering: auto;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(43, 140, 238, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(43, 140, 238, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
